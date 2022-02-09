@@ -1,3 +1,29 @@
+/* WHITE MODE */
+
+let toggle = document.getElementById("toggle");
+let bouleToggle = document.getElementById("boule-toggle");
+
+toggle.addEventListener("click", () => {
+    bouleToggle.classList.toggle("toggling");   
+})
+
+/* document.querySelectorAll('.white').forEach(item => {
+    toggle.addEventListener('click', () => {
+        item.classList.toggle("whiteMode")
+    })
+})
+*/
+
+/* BURGER MENU */ 
+
+let burger = document.getElementById("burger");
+
+
+burger.addEventListener("click", () =>{
+    burger.classList.toggle("burgerToggle")
+})
+
+
 /*
 
 const CLEFAPI = '0bd35073a3ad84f60d34d7314e43b93f';
