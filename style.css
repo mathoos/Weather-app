@@ -145,7 +145,7 @@ header{
     width: 17em;
     height: 17em;
     border-radius: 80px;
-    margin-top: 5%;
+    margin-top: 10%;
     background-image: linear-gradient(to left, #65c7eb  30%, #9c47e7  100%);
     box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.582);
 }
@@ -321,8 +321,8 @@ footer{
     width: 3.5em;
     height: 5.5em;
     background: #2d2d2d;
-box-shadow: inset 10px 10px 26px #212121,
-            inset -10px -10px 26px #393939;
+    box-shadow: inset 10px 10px 26px #212121,
+                inset -10px -10px 26px #393939;
 }
 p{
     margin: 0;
