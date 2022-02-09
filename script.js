@@ -18,13 +18,25 @@ toggle.addEventListener("click", () => {
 
 let burger = document.getElementById("burger");
 
-
 burger.addEventListener("click", () =>{
     burger.classList.toggle("burgerToggle")
 })
 
+/* CLASS ACTIVE BLOC HEURE */
 
-/*
+let footer = document.querySelector("footer");
+let blocH = footer.querySelectorAll(".bloc-h");
+
+// On fait une boucle pour attribuer la classe active sur le bouton sélectionné
+for (var i = 0; i < blocH.length; i++) {
+  blocH[i].addEventListener("click", function() {
+    var active = document.getElementsByClassName("active");
+    active[0].className = active[0].className.replace(" active", "");
+    this.className += " active";   
+  });
+}
+
+
 
 const CLEFAPI = '0bd35073a3ad84f60d34d7314e43b93f';
 let resultatsAPI;
@@ -38,6 +50,7 @@ const joursDiv = document.querySelectorAll('.jour-prevision-nom');
 const tempJoursDiv = document.querySelectorAll('.jour-prevision-temp');
 const imgIcone = document.querySelector('.logo-meteo');
 const chargementContainer = document.querySelector('.overlay-icone-chargement');
+
 
 if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(position => {
@@ -54,7 +67,7 @@ function AppelAPI(long, lat){
     
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${CLEFAPI}`)
     .then((reponse) =>{
-        return reponse.json()
+        return reponse.json();
 
     })
     .then((data) =>{
@@ -113,7 +126,7 @@ function AppelAPI(long, lat){
 
     })
 }
-
+/*
 
 
 // GESTION DE TEMPS 
